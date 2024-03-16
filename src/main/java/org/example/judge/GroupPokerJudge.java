@@ -1,11 +1,11 @@
 package org.example.judge;
 
-import com.google.common.base.Joiner;
 import org.example.manager.CardManager;
 import org.example.manager.PlayerManager;
 import org.example.model.Card;
 import org.example.model.Player;
 import org.example.res.GroupCardResult;
+import org.example.util.Joiner;
 
 import java.util.Comparator;
 import java.util.LinkedHashMap;
@@ -82,7 +82,7 @@ public class GroupPokerJudge extends AbstractPokerJudge {
 
         //平局输出空
         String winner = groupScoreCount + "\n";
-        winner += equalNum == groupPlayerMap.size() - 1 ? "得分相同：平局" : "得分最多：" + winners.get(0).getGroup() + "号队：" + Joiner.on(",").skipNulls().join(winners.stream().map(Player::getName).collect(Collectors.toList()));
+        winner += equalNum == groupPlayerMap.size() - 1 ? "得分相同：平局" : "得分最多：" + winners.get(0).getGroup() + "号队：" + Joiner.on(",").join(winners.stream().map(Player::getName).collect(Collectors.toList()));
 
 
         return new GroupCardResult(playerPlayCardMap, playerScoreMap, sortAndGroup, winner);

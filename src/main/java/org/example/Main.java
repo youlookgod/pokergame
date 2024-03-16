@@ -1,6 +1,5 @@
 package org.example;
 
-import com.google.common.base.Joiner;
 import org.example.comparator.CardComparator;
 import org.example.manager.CardManager;
 import org.example.manager.PlayerManager;
@@ -8,6 +7,7 @@ import org.example.judge.GroupPokerJudge;
 import org.example.res.GroupCardResult;
 import org.example.rule.CardRule;
 import org.example.strategy.StrategyEnum;
+import org.example.util.Joiner;
 
 import java.util.Arrays;
 import java.util.List;
